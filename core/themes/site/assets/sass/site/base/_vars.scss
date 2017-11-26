@@ -1,0 +1,178 @@
+/*----------------------------------------------------------------------
+	Fonts -- Webfonts.scss defined
+----------------------------------------------------------------------*/
+$font1: 				"Open Sans";
+$font2: 				"Open Sans";
+$font3: 				"Open Sans";
+
+$fw-light: 				300;
+$fw-reg: 				400;
+$fw-bold: 				700;
+
+/*----------------------------------------------------------------------
+	Colors
+----------------------------------------------------------------------*/
+
+// Site Specific Colors (Style Guide)
+$ct: 					#000;
+$c1: 					#364088;
+$c2: 					#5eb0e2;
+$c3: 					#5c2349;
+$c4: 					#ef4862;
+$c5: 					#000;
+$c6: 					#d5d7e6;
+
+//Site Specific Backgrounds
+$bgc1:					$c1;
+$bgc2:					$c2;
+$bgc3:					$c3;
+$bgc4:					$c4;
+$bgc5:					$c5;
+$bgc6:					$c6;
+
+//Default Color of Text Within BGs
+$bgtc1:					white;
+$bgtc2:					white;
+$bgtc3:					white;
+$bgtc4:					white;
+$bgtc5:					white;
+$bgtc6:					black;
+
+//Shared Colors (Text Only)
+$c-muted:   			#9e9e9e;
+$c-primary: 			$c1;
+$c-success: 			#429442;
+$c-info:				#09f;
+$c-warning: 			orange;
+$c-error:				red;
+
+//Shared Colors (Backgrounds)
+$bgc-muted:   			lighten($c-muted, 25%);
+$bgc-primary: 			$c1;
+$bgc-success: 			$c-success;
+$bgc-info:				$c-info;
+$bgc-warning: 			$c-warning;
+$bgc-error:				$c-error;
+
+//Shared Colors (text color)
+$bgt-muted:   			$c-muted;
+$bgt-primary: 			white;
+$bgt-success: 			white;
+$bgt-info:				white;
+$bgt-warning: 			white;
+$bgt-error:				white;
+
+
+/*----------------------------------------------------------------------
+	Default Typography
+----------------------------------------------------------------------*/
+
+$type-size:				15px;		// Font Size (Default P Tags)
+$type-lh:				22px;		// Line Height
+$type-link:				$c1;
+$type-link-hov:			$c2;
+
+$type-sm-size:			15px;
+$type-sm-lh:			22px;
+
+/*----------------------------------------------------------------------
+	Breakpoints
+----------------------------------------------------------------------*/
+$bp-xlg: 				1300px;		//Large Desktop
+$bp-lg: 				1100px;
+$bp-md: 				960px;
+$bp-sm: 				800px;
+$bp-xsm: 				700px;
+
+
+/*----------------------------------------------------------------------
+	Wrap Sizes
+----------------------------------------------------------------------*/
+$wrap-xlg: 				1400px;
+$wrap-lg: 				1200px;
+$wrap-md: 				1000px;
+$wrap-sm: 				700px;
+$wrap-xsm: 				550px;
+
+$wrap-pad-sm:			20px;
+$wrap-pad-md:			30px;
+$wrap-pad-lg:			40px;
+
+$wrap-pad-bp1:			$bp-sm;
+$wrap-pad-bp1-size:		30px;
+
+$wrap-pad-bp2:			$bp-xsm;
+$wrap-pad-bp2-size:		15px;
+
+
+/*----------------------------------------------------------------------
+	Main Layout
+----------------------------------------------------------------------*/
+
+/*- Main -*/
+$main-bg:				#404040;	 			// EG: #fff url("images/test.jpg") no-repeat center;
+$main-bgs: 				cover;					// Default Site BG Size
+$main-font:     		$font1;					// Default Site Font Face
+$main-color:			black;					// Default Site Font Color
+
+$main-sidebar-bg:		#000;					// Background
+$main-sidebar-width:	360px;					// Width (width + padding)
+$main-sidebar-bp:		$bp-lg;					// Break Point (to go from 2 col to 1)
+
+$main-content-pad:		50px;					// Content Padding Default
+$main-content-pad-md:	40px;
+$main-content-pad-sm:	30px;
+$main-content-pad-xsm:	15px;
+
+$main-sidebar-pad: 		30px;					// Sidebar Padding
+
+
+/*----------------------------------------------------------------------
+	Default Forms
+----------------------------------------------------------------------*/
+
+$form-label-font:		$font1;					// Font
+$form-label-fw:			$fw-bold;				// Font Weight
+$form-label-fs:			11px;					// Size
+$form-label-col:		#424242;				// Color
+$form-label-active:		#000;					// Active Color (Label Hint)
+$form-label-hint: 		#ccc;					// Label after content entered
+$form-label-marg:		0 0 2px 0;				// Margin
+
+$form-def-height:		55px;					// Height
+$form-def-bg:			#e3e3e3;				// BG Color
+$form-def-bord:			inherit; 				// Border
+$form-def-marg:			0 0 5px;				// Margin
+$form-def-pad:			10px 15px;				// Padding
+$form-def-col:			#555;					// Color Default
+$form-def-pcol:			#555;					// Placeholder Color
+$form-def-focus-bg:		#f3f3f3;				// Focus BG
+$form-def-focus-border:	1px solid #ccc;			// Focus Border
+$form-def-br:			0px;					// Border Radius
+$form-def-font:			$font1;					// Font
+$form-def-fs:			17px;					// Font Size
+$form-def-ta-height:	150px;					// Textarea min height
+
+//Chosen Plugin Options
+//Most of chosen plugin is controlled in the plugins.scss - Some are passed from above
+$form-def-chzn-pad:		0 0 0 8px;
+
+
+/*----------------------------------------------------------------------
+	Margins
+----------------------------------------------------------------------*/
+$margin-xsm:	10px;
+$margin-sm:		15px;
+$margin-md:		25px;
+$margin-lg:		40px;
+$margin-xlg:	60px;
+
+
+/*----------------------------------------------------------------------
+	Padding
+----------------------------------------------------------------------*/
+$pad-xsm:		10px;
+$pad-sm:		20px;
+$pad-md:		40px;
+$pad-lg:		60px;
+$pad-xlg:		80px;

@@ -1,0 +1,179 @@
+/*-----------------------------------
+	Headers
+-----------------------------------*/
+.hdr1{
+	font-family: $font1;
+	font-weight:$fw-bold;
+	font-size: 60px;
+	line-height: 60px;
+	letter-spacing: 0px;
+	@media screen and (max-width : $bp-sm) {
+		font-size: 40px;
+		line-height: 40px;
+		letter-spacing: 0px;
+	}
+}
+.hdr2{
+	font-family: $font1;
+	font-weight:$fw-bold;
+	font-size: 40px;
+	line-height: 40px;
+	letter-spacing: 0px;
+	@media screen and (max-width : $bp-sm) {
+		font-size: 30px;
+		line-height: 30px;
+		letter-spacing: 0px;
+	}
+}
+.hdr3{
+	font-family: $font1;
+	font-weight:$fw-bold;
+	font-size: 23px;
+	line-height: 26px;
+	letter-spacing: 0px;
+	@media screen and (max-width : $bp-sm) {
+		font-size: 20px;
+		line-height: 24px;
+		letter-spacing: 0px;
+	}
+}
+.hdr4{
+	font-family: $font1;
+	font-weight:$fw-bold;
+	font-size: 18px;
+	line-height: 23px;
+	letter-spacing: 0px;
+	@media screen and (max-width : $bp-sm) {
+		font-size: 17px;
+		line-height: 23px;
+		letter-spacing: 0px;
+	}
+}
+.hdr5{
+	font-family: $font1;
+	font-weight:$fw-bold;
+	font-size: 16px;
+	line-height: 23px;
+	letter-spacing: 0px;
+	@media screen and (max-width : $bp-sm) {
+
+	}
+}
+
+
+/*-----------------------------------
+	Buttons
+-----------------------------------*/
+.btn{
+	display: inline-block;
+	padding:15px 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	color:#fff; background:$c1;
+	font-weight: $fw-bold;
+	letter-spacing: 1px;
+	&:hover{
+		color:#fff; background: darken($c1, 10%);
+	}
+	&.fill{
+		width:100%;
+		display: block;
+	}
+	&.small{
+		padding:5px 10px;
+		font-size: 15px;
+	}
+	@media screen and (max-width : $bp-sm) {
+		padding:5px 10px;
+		font-size: 17px
+	}
+}
+
+.btn2{
+	display: inline-block;
+	padding:15px 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 20px;
+	color:#fff; background:$c2;
+	font-weight: $fw-bold;
+	letter-spacing: 1px;
+	&:hover{
+		color:#fff; background: darken($c2, 10%);
+	}
+	&.fill{
+		width:100%;
+		display: block;
+	}
+	&.small{
+		padding:5px 10px;
+		font-size: 15px;
+	}
+	@media screen and (max-width : $bp-sm) {
+		padding:5px 10px;
+		font-size: 17px
+	}
+}
+
+
+
+
+/*-----------------------------------
+	Defaults
+-----------------------------------*/
+p, li, dt, dd{
+	font-size:$type-size;
+	@media screen and (max-width : $bp-sm) {
+		font-size: $type-sm-size;
+	}
+}
+p{
+	line-height:$type-lh;
+	@media screen and (max-width : $bp-sm) {
+		line-height: $type-sm-lh;
+	}
+}
+li{
+	list-style:none;
+}
+a{
+	color:$type-link;
+	text-decoration:none;
+	&:hover{
+		color:$type-link-hov;
+	}
+}
+
+strong{ font-weight:700; }
+big{font-size:120%;}
+small{font-size:80%;}
+
+
+
+/*---------------------------------------
+	Entry Content - TinyMCE Entered
+---------------------------------------*/
+.entry-content {
+	h1{
+		margin:10px 0 12px 0; font-size: 30px
+	}
+	h2{
+		margin:10px 0 12px 0; font-size: 22px
+	}
+	h3{
+		margin:10px 0 12px 0; font-size: 18px;
+	}
+	p, ul, ol{
+		margin:0 0 20px 0;
+	}
+	li{
+		margin:0 0 7px 25px; list-style-type:disc;
+	}
+	ol li{
+		list-style-type:decimal;
+	}
+	img{
+		margin:0 15px 5px 0; max-width:100%; height:auto;
+	}
+}

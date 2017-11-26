@@ -1,0 +1,322 @@
+
+/*----------------------------------------------------------------------
+	Grid Spacing
+----------------------------------------------------------------------*/
+
+$col-sp0: 				0;
+$col-sp1: 				.5%;
+$col-sp2: 				1%;
+$col-sp3: 				1.5%;
+$col-sp4: 				2%;
+$col-sp5: 				3%;
+
+$col-pad-xsm:			5px;
+$col-pad-sm:			10px;
+$col-pad-md:			20px;
+$col-pad-lg:			30px;
+$col-pad-xlg:			40px;
+
+$col-vsp-xsm:			5px;
+$col-vsp-sm:			10px;
+$col-vsp-md:			20px;
+$col-vsp-lg:			40px;
+$col-vsp-xlg:			50px;
+
+$col-auto-vspace:		20px;
+
+
+
+
+/*----------------------------------------------------------------------
+	Grid Breaks
+----------------------------------------------------------------------*/
+
+$auto-54321-br1:		$bp-lg;
+$auto-54321-br2:		$bp-md;
+$auto-54321-br3:		$bp-sm;
+$auto-54321-br4:		$bp-xsm;
+
+$auto-4321-br1:			$bp-md;
+$auto-4321-br2:			$bp-sm;
+$auto-4321-br3:			$bp-xsm;
+
+$auto-42-br1:			$bp-sm;
+$auto-32-br1:			$bp-sm;
+
+$auto-321-br1:			$bp-lg;
+$auto-321-br2:			$bp-xsm;
+
+
+
+
+/*---------------------------------------
+	AYC Col System
+---------------------------------------*/
+
+// Columns Horizontal Spacing and Calcs
+
+@mixin calc-row($col-marg) {
+	margin-left: $col-marg * -1;
+	margin-right: $col-marg * -1;
+	@include flexbox;
+	@include flex-wrap(wrap); // iOS < 6
+	@include flex-flow(row wrap);
+	@include align-items(flex-start);
+	@include align-content(flex-start);
+	@at-root .lt-ie10 #{&} {
+		display: block; // both floatgrid and inline-block method
+		font-size: 0; // inline-block method
+	}
+}
+
+@mixin calc-cols($num-cols, $col-max, $col-marg) {
+	$calc-col-width: ( (100% / $col-max) * $num-cols ) - ($col-marg * 2);
+	position: relative;
+	min-height: 1px;
+	width: $calc-col-width;
+	max-width: $calc-col-width;
+	margin-right: $col-marg;
+	margin-left: $col-marg;
+	@include flex(0 0 $calc-col-width);
+	@include align-self(stretch);
+	@at-root .lt-ie10 #{&} {
+		// float: left; // floatgrid method
+		display: inline-block; // inline-block method
+		font-size: 16px; // inline-block method // IE fix
+		font-size: initial; // inline-block method
+	}
+}
+
+$col-space: $col-sp0, $col-sp1, $col-sp2, $col-sp3, $col-sp4, $col-sp5;
+@for $i from 1 through length($col-space) {
+	.col-space#{($i - 1)} {
+		@include calc-row(nth($col-space, $i));
+		.col {
+			@include calc-cols(1, 1, nth($col-space, $i));
+		}
+		.col1-2 {
+			@include calc-cols(1, 2, nth($col-space, $i));
+		}
+		.col1-3 {
+			@include calc-cols(1, 3, nth($col-space, $i));
+		}
+		.col2-3 {
+			@include calc-cols(2, 3, nth($col-space, $i));
+		}
+		.col1-4 {
+			@include calc-cols(1, 4, nth($col-space, $i));
+		}
+		.col3-4 {
+			@include calc-cols(3, 4, nth($col-space, $i));
+		}
+		.col1-5 {
+			@include calc-cols(1, 5, nth($col-space, $i));
+		}
+		.col2-5 {
+			@include calc-cols(2, 5, nth($col-space, $i));
+		}
+		.col3-5 {
+			@include calc-cols(3, 5, nth($col-space, $i));
+		}
+		.col4-5 {
+			@include calc-cols(4, 5, nth($col-space, $i));
+		}
+	}
+	.auto-5-4-3-2-1.col-space#{($i - 1)} {
+		.col {
+			@include calc-cols(1, 5, nth($col-space, $i));
+			@media screen and (max-width : $auto-54321-br1) {
+				 @include calc-cols(1, 4, nth($col-space, $i));
+			}
+			@media screen and (max-width : $auto-54321-br2) {
+				 @include calc-cols(1, 3, nth($col-space, $i));
+			}
+			@media screen and (max-width : $auto-54321-br3) {
+				 @include calc-cols(1, 2, nth($col-space, $i));
+			}
+			@media screen and (max-width : $auto-54321-br4) {
+				 @include calc-cols(1, 1, nth($col-space, $i));
+			}
+		}
+	}
+	.auto-4-3-2-1.col-space#{($i - 1)} {
+		.col {
+			@include calc-cols(1, 4, nth($col-space, $i));
+			@media screen and (max-width : $auto-4321-br1) {
+				 @include calc-cols(1, 3, nth($col-space, $i));
+			}
+			@media screen and (max-width : $auto-4321-br2) {
+				 @include calc-cols(1, 2, nth($col-space, $i));
+			}
+			@media screen and (max-width : $auto-4321-br3) {
+				 @include calc-cols(1, 1, nth($col-space, $i));
+			}
+		}
+	}
+	.auto-4-2.col-space#{($i - 1)} {
+		.col {
+			@include calc-cols(1, 4, nth($col-space, $i));
+			@media screen and (max-width : $auto-42-br1) {
+				 @include calc-cols(1, 2, nth($col-space, $i));
+			}
+		}
+	}
+	.auto-3-2.col-space#{($i - 1)} {
+		.col {
+			@include calc-cols(1, 3, nth($col-space, $i));
+			@media screen and (max-width : $auto-32-br1) {
+				 @include calc-cols(1, 2, nth($col-space, $i));
+			}
+		}
+	}
+	.auto-3-2-1.col-space#{($i - 1)} {
+		.col {
+			@include calc-cols(1, 3, nth($col-space, $i));
+			@media screen and (max-width : $auto-321-br1) {
+				 @include calc-cols(1, 2, nth($col-space, $i));
+			}
+			@media screen and (max-width : $auto-321-br2) {
+				 @include calc-cols(1, 1, nth($col-space, $i));
+			}
+		}
+	}
+}
+
+
+
+
+// Col Vertical Spacing
+
+.col-vsp-xsm {
+	.col {
+		margin-bottom: $col-vsp-xsm;
+	}
+}
+
+.col-vsp-sm {
+	.col {
+		margin-bottom: $col-vsp-sm;
+	}
+}
+
+.col-vsp-md {
+	.col {
+		margin-bottom: $col-vsp-md;
+	}
+}
+
+.col-vsp-lg {
+	.col {
+		margin-bottom: $col-vsp-lg;
+	}
+}
+
+.col-vsp-xlg {
+	.col {
+		margin-bottom: $col-vsp-xlg;
+	}
+}
+
+
+
+
+// Col Padding
+
+.col-pad-xsm {
+	.col {
+		padding: $col-pad-xsm;
+	}
+}
+
+.col-pad-sm {
+	.col {
+		padding: $col-pad-sm;
+	}
+}
+
+.col-pad-md {
+	.col {
+		padding: $col-pad-md;
+	}
+}
+
+.col-pad-lg {
+	.col {
+		padding: $col-pad-lg;
+	}
+}
+
+.col-pad-xlg {
+	.col {
+		padding: $col-pad-xlg;
+	}
+}
+
+
+
+
+// Simple Auto Breaks On Size
+
+@mixin col-auto-break {
+	margin-left: inherit;
+	margin-right: inherit;
+	.col {
+		width: 100%;
+		max-width: 100%;
+		@include flex(0 0 auto);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&.col-auto-vspace {
+		.col {
+			margin-bottom: $col-auto-vspace;
+		}
+	}
+	@at-root .lt-ie10 #{&} {
+		.col {
+			// float: inherit; // floatgrid method
+			display: inline-block; // inline-block method
+		}
+	}
+}
+
+@media screen and (max-width : $bp-xsm) {
+	.col-auto-xsm {
+		@include col-auto-break;
+	}
+}
+
+@media screen and (max-width : $bp-sm) {
+	.col-auto-sm {
+		@include col-auto-break;
+	}
+}
+
+@media screen and (max-width : $bp-md) {
+	.col-auto-md {
+		@include col-auto-break;
+	}
+}
+
+@media screen and (max-width : $bp-lg) {
+	.col-auto-lg {
+		@include col-auto-break;
+	}
+}
+
+@media screen and (max-width : $bp-xlg) {
+	.col-auto-xlg {
+		@include col-auto-break;
+	}
+}
+
+
+
+
+/*---------- Example Styling ------------*/
+
+.col-example {
+	.col {
+		background-color: #dedede;
+	}
+}

@@ -1,0 +1,14 @@
+/**************************************************************/
+/* Button Group */
+/**************************************************************/
+
+.button-group {
+	/*override*/
+	.btn {margin-bottom: 5px;}
+}
+.button-group-center {text-align: center;}
+.button-group-left {text-align: left;}
+.button-group-right {text-align: right;}
+.button-group-full {
+	.btn {width: 100%; display: block;}
+}

@@ -1,0 +1,61 @@
+/**************************************************************/
+/* Brando's Hamburger Menu */
+/**************************************************************/
+
+.header { display: block; background-color: #000; position: relative; width: 100%; height: 70px; padding: 0; z-index: 1; }
+@media screen and (min-width: 961px) {
+	.header { overflow: hidden; }
+}
+@media screen and (max-width: 960px) {
+	.header { background-color: #eee; box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3); }
+}
+@media screen and (min-width: 961px) {
+	.header #nav-main .no-desktop, .header .no-desktop { display: none; }
+}
+@media screen and (max-width: 960px) {
+	.header #nav-main .desktop-only, .header .desktop-only { display: none; }
+}
+
+/* Hamburger Button */
+@media screen and (max-width: 960px) {
+	.hamburger { display: block; position: absolute; right: 20px; top: 20px; width: 30px; height: 30px; margin: 0; }
+	.hamburger .line {
+		display: block; position: absolute; left: 0; top: 0; width: 100%; height: 4px; margin: 0; background: #333; border-radius: 0; opacity: 1;
+		-moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; -webkit-transition: all 0.2s ease; transition: all 0.2s ease;
+		-moz-transform: scale(1) rotate(0deg); -ms-transform: scale(1) rotate(0deg); -webkit-transform: scale(1) rotate(0deg); transform: scale(1) rotate(0deg);
+		-moz-transform-origin: center center; -ms-transform-origin: center center; -webkit-transform-origin: center center; transform-origin: center center;
+	}
+	.hamburger .line2 { top: 7px; }
+	.hamburger .line3 { top: 14px; }
+	.hamburger.active .line { position: absolute; left: 0; top: 7px; width: 30px; margin: 0; }
+	.hamburger.active .line1 {
+		-moz-transform: scale(1) rotate(45deg); -ms-transform: scale(1) rotate(45deg); -webkit-transform: scale(1) rotate(45deg); transform: scale(1) rotate(45deg);
+	}
+	.hamburger.active .line2 {
+		-moz-transform: scale(1) rotate(-45deg); -ms-transform: scale(1) rotate(-45deg); -webkit-transform: scale(1) rotate(-45deg); transform: scale(1) rotate(-45deg);
+	}
+	.hamburger.active .line3 { opacity: 0; }
+}
+
+/* Nav Wrap */
+@media screen and (min-width: 961px) {
+	.navmain-wrap { display: block !important; }
+}
+@media screen and (max-width: 960px) {
+	.navmain-wrap { display: none; float: none; position: absolute; left: 0; top: 100%; width: 100%; padding: 0; background-color: #8dd4ff; overflow: auto; z-index: 10; }
+}
+#nav-main { display: block; margin: 0; padding: 14px 20px; border-radius: 0; }
+#nav-main li { display: inline-block; margin: 5px; vertical-align: middle; }
+@media screen and (max-width: 960px) {
+	#nav-main li { display: block; padding: 7px 0; margin: 0; line-height: normal; }
+}
+#nav-main a { display: block; }
+
+/* Animation: Side Slide */
+@media screen and (max-width: 960px) {
+	.side-slide.navmain-wrap {
+		display: block; position: absolute; left: auto; right: -300px; top: 0; width: 300px;
+		-moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -webkit-transition: all 0.3s ease; transition: all 0.3s ease;
+	}
+	.side-slide.navmain-wrap.active { right: 0; }
+}

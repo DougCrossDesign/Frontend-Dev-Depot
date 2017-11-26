@@ -1,0 +1,17 @@
+Header [Optional]
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: Recommend less than 100
+
+
+Image
+------------------------------------------
+Input Type 		: File Upload
+Image Size		: 350x350
+Image Resize	: Resize at aspect ratio
+
+
+Content 
+------------------------------------------
+Input Type 		: TinyMCE
+Char Count		: Unlimited

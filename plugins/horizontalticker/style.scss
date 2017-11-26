@@ -1,0 +1,19 @@
+/**************************************************************/
+/* Horizontal Ticker */
+/**************************************************************/
+
+.hrz-ticker {
+	display: block; padding: 10px 0; overflow: hidden; opacity: 0; visibility: hidden;
+	&.active { opacity: 1; visibility: visible; }
+	ul { position: relative; }
+	li { float: left; padding-right: 30px; white-space: nowrap; }
+}
+
+/* USER */
+.hrz-ticker {
+	li {
+		margin: 0; padding: 0 20px; border-right: 1px solid #ddd; list-style: none;
+		&:first-child { padding-left: 0; }
+		&:last-child { border: none; }
+	}
+}

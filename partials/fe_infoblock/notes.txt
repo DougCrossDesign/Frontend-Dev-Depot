@@ -1,0 +1,40 @@
+> [Repeating Elements]
+
+Image
+------------------------------------------
+Input Type 		: File Upload
+Format			: Jpg
+Image Size		: 450x300
+Image Resize	: Center Crop
+
+
+Header
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: 100 Characters
+
+
+Description
+------------------------------------------
+Input Type 		: TextArea
+Char Count		: 160 Characters
+
+
+Link Text
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: 40 Characters
+
+
+Link
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: Unlimited
+
+
+Open in new Window?
+------------------------------------------
+Input Type 		: Checkbox
+Options			: Yes / No
+
+> End Repeating

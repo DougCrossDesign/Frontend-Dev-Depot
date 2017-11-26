@@ -1,0 +1,7 @@
+{
+	"title": "TPYPEFORM API EMBED v0",
+	"name": "typeformembed",
+	"version": "v0",
+	"description": "Typeform API Embed",
+	"autoinit" : true
+}

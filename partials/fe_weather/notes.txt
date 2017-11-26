@@ -1,0 +1,3 @@
+Uses an external weather API
+
+> Requires weather icons font pack

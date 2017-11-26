@@ -1,0 +1,7 @@
+{
+	"title": "YT API EMBED v0.1",
+	"name": "ytembed",
+	"version": "v0.1",
+	"description": "Updated API for Youtube's Video Embed",
+	"autoinit" : true
+}

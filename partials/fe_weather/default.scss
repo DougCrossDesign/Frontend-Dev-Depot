@@ -1,0 +1,27 @@
+/**************************************************************/
+/* Weather */
+/**************************************************************/
+
+.weather-wrap {
+	background-color: $c1; color: #fff; padding: 25px 0;
+	.weather-col1 {
+		width: 50%; float: left; border-right: 1px solid $c1;
+		@media screen and (max-width : $bp-sm) {width: inherit; float: inherit; border: none; padding: 20px 0;}
+	}
+	.weather-col2 {
+		width: 50%; float: left;
+		@media screen and (max-width : $bp-sm) {width: inherit; float: inherit; padding: 20px 0;}
+	}
+	.weather-hdr {font-weight: $fw-bold; font-family: $font1; text-transform: uppercase; font-size: 24px; margin-bottom: 20px; text-align: center; padding: 0 25px;}
+	.weather-cur-wrap {margin-bottom: 20px; padding-right: 20px;}
+	.weather-cur-temp {float: left; width: 33%; background-color: $c3; height: 100px; line-height: 100px; text-align: center; font-weight: $fw-light; font-size: 60px;}
+	.weather-cur-icon {float: left; width: 33%; height: 100px; line-height: 100px; text-align: center; font-size: 100px;}
+	.weather-cur-desc {float: left; width: 33%; height: 100px; text-align: left; font-size: 15px; font-weight: $fw-bold; line-height: 19px; text-transform: uppercase;}
+	.weather-cur-text {font-size: 13px; line-height: 20px; padding: 0 35px;}
+	.weather-extended {padding: 20px;}
+	.weather-extended-col {
+		width: 33%; padding: 0 10px; float: left; text-align: center;
+		span {font-size: 100px;}
+		div {text-transform: uppercase; font-weight: $fw-bold;}
+	}
+}

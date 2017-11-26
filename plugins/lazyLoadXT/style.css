@@ -1,0 +1,63 @@
+
+.dib-select {
+  display: inline-block;
+  width: 220px;
+  margin: 5px;
+}
+
+.example-box {
+  display: block;
+  position: relative;
+  padding: 25px;
+  border: 5px solid transparent;
+}
+@media screen and (max-width: 500px) {
+  .example-box {
+    padding: 20px 0;
+  }
+  .example-box:after {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 651px) {
+  .example-box:hover {
+    border-color: #364088;
+  }
+  .example-box:hover:after {
+    display: none;
+  }
+}
+
+.example-box:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  width: 100%;
+  width: calc(100% - 50px);
+  height: 5px;
+  margin: 0 auto;
+  background-color: #000;
+}
+
+
+/* Lazy Load XT */
+.lazy {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.lazy.lazy-loaded {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+#load-items .no-items {
+  padding: 30px;
+}

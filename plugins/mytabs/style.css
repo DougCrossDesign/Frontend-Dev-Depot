@@ -1,0 +1,29 @@
+/**************************************************************/
+/* Tabs */
+/**************************************************************/
+
+.tabs-area { display: block; }
+.tabs-nav-toggle { display: block; position: relative; text-align: center; cursor: pointer; }
+@media screen and (min-width: 801px) { .tabs-nav-toggle { display: none; } }
+.tabs-nav-toggle:after { content: ""; display: inline-block; margin: 0 0 0 8px; vertical-align: middle; border-top: 5px solid #0d0d0d; border-left: 5px solid transparent; border-right: 5px solid transparent; }
+.tabs-nav-toggle.active:after { border-top: none; border-bottom: 5px solid #0d0d0d; }
+.tabs-nav { display: block; position: relative; text-align: center; margin: 0 0 30px; }
+@media screen and (min-width: 801px) { .tabs-nav ul { display: block !important; } }
+@media screen and (max-width: 800px) { .tabs-nav ul { display: none; position: absolute; left: 0; top: 0; width: 100%; z-index: 1; } }
+.tabs-nav li { display: inline-block; padding: 0 15px; }
+@media screen and (max-width: 800px) { .tabs-nav li { display: block; float: none; } }
+.tabs-nav a { display: block; }
+
+/* Start - Slide down */
+.js .tabs-content { overflow: hidden; height: 0; position: relative; }
+.js .tab-sct { position: absolute; top: 0; left: 0; width: 100%; }
+
+/* Start - NO slide down */
+/* .tabs-content { overflow: hidden; position: relative; } */
+/* .js .tab-sct {} */
+
+/* User Styles */
+.tabs-nav a { display: block; padding: 10px 15px; color: #fff; font-weight: bold; background: skyblue; cursor: pointer; border-radius: 5px; }
+.tabs-nav a:hover { color: #fff; background: #333; }
+.tabs-nav .current a { color: #fff; background: #333; }
+.tab-sct { margin: 15px 0; }

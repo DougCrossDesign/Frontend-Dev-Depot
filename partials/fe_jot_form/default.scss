@@ -1,0 +1,19 @@
+body{
+
+  margin: 0;
+
+}
+
+#JotFormIFrame{
+
+  padding: 0;
+  margin: 0;
+
+  iframe{
+    min-height: 750px;
+    width: 1px;
+    min-width: 100%;
+    border:none;
+  }
+
+}

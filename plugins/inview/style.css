@@ -1,0 +1,8 @@
+/**************************************************************/
+/* inView */
+/**************************************************************/
+
+#move-item1 { display: block; position: absolute; right: 10px; top: 10px; width: 70px; height: 70px; background-color: #A4EDCF; }
+#move-item2 { display: block; position: absolute; right: 10px; top: 10px; width: 90px; height: 90px; background-color: #FF7D87; }
+#move-item3 { display: block; position: absolute; left: 130px; top: 110px; width: 70px; height: 70px; background-color: #A4EDCF; }
+#move-item4 { display: block; position: absolute; left: 10px; top: 10px; width: 90px; height: 90px; background-color: #FF7D87; }

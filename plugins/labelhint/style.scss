@@ -1,0 +1,23 @@
+/**************************************************************/
+/* Label Hint */
+/**************************************************************/
+
+.js .lbl-hint label {
+	position: relative; top: 5px;
+	@include opacity(0);
+	@include transition(all .3s ease-in-out);
+}
+.lbl-hint label {
+	&.on {
+		color: $form-label-active !important;
+	}
+	&.show {
+		top:0; color: $form-label-hint;
+		@include opacity(1);
+	}
+}
+.lt-ie10 .lbl-hint label{
+	/* IE Label Hint */
+	top: 0;
+	@include opacity(1);
+}

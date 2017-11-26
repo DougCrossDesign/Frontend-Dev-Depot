@@ -1,0 +1,17 @@
+/**************************************************************/
+/* More/Less (Height) */
+/**************************************************************/
+
+.more-height { display: block; position: relative; }
+.moreh-content { display: block; position: relative; height: 160px; margin: 0 0 12px; overflow: hidden; text-align: left; }
+.moreh-content:after { content: ""; display: block; height: 50px; width: 100%; position: absolute; left: 0; bottom: 0; background: url("/core/themes/site/assets/images/gradient-btm-white.png") repeat-x left bottom; }
+.active .moreh-inner { position: relative; z-index: 1; }
+.moreh-toggle { display: inline-block; text-decoration: none; text-transform: uppercase; }
+
+/* Disable */
+.disable .moreh-content { height: auto; }
+.disable .moreh-content:after { display: none; }
+.disable .moreh-toggle { display: none; }
+
+/* User */
+.moreh-toggle {}

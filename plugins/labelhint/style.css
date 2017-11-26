@@ -1,0 +1,8 @@
+/**************************************************************/
+/* Label Hint */
+/**************************************************************/
+
+.js .lbl-hint label { position: relative; top: 5px; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
+.lbl-hint label.on { color: #000 !important; }
+.lbl-hint label.show { top: 0; color: #ccc; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }
+.lt-ie10 .lbl-hint label { /* IE Label Hint */ top: 0; filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; }

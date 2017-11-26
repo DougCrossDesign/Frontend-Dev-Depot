@@ -1,0 +1,16 @@
+Header [Optional]
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: Recommend less than 100
+
+
+> [Repeating Elements]
+
+Full Sized Image
+------------------------------------------
+Input Type 		: File Input
+Format			: JPG
+Image Size		: 1100x500
+Image Resize	: Center Crop
+
+> End Repeating

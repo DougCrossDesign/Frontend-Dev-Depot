@@ -1,0 +1,27 @@
+/**************************************************************/
+/* Events List */
+/**************************************************************/
+
+.events-list-hdr {color: $c1;}
+.events-list {
+	@media screen and (max-width : $bp-md) {text-align: center; background-color: rgba(255,255,255,.2); padding: 0;}
+	.inner {}
+	a {
+		padding: 10px 0; border-bottom: 1px solid #ccc; display: block; color: $c1;
+		@include transition(background-color 0.3s ease-in-out);
+		@media screen and (max-width : $bp-md) {padding: 10px 20px;}
+		&:hover {background-color: #fff;}
+	}
+	.col1 {
+		width: 55%; padding-left: 10px; float: left; font-weight: bold;
+		@media screen and (max-width : $bp-md) {width: inherit; float: inherit;}
+	}
+	.col2 {
+		width: 37%; float: left;
+		@media screen and (max-width : $bp-md) {width: inherit; float: inherit; margin-bottom: 0;}
+	}
+	.col3 {
+		width: 8%; float: left;
+		@media screen and (max-width : $bp-md) {width: inherit; float: inherit; display: none;}
+	}
+}

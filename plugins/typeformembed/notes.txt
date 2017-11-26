@@ -1,0 +1,2 @@
+Please note that data-url="" should contain PHP input field for CMS User to copy and paste Share URL from Typeform into.
+This URL can be found under the Share tab and be the first side menu option reading: Share your typeform. Grab the full URL and share it on the web.

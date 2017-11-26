@@ -1,0 +1,11 @@
+Title
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: 75 Characters
+
+
+Content 
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: Unlimited
+Other			: Recommend less than 140c

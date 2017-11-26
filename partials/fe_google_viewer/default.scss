@@ -1,0 +1,23 @@
+.viewer-container{
+  width: 100%;
+  height: 450px;
+  position: relative;
+  .viewer-placeholder{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image:url('https://howdidyourpartygo.files.wordpress.com/2010/06/stumble2.jpg');
+    background-position: center center;
+    background-size: cover;
+    z-index: 2;
+    img{
+      display: block;
+      margin: 150px auto;
+    }
+  }
+  .viewer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+}

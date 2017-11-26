@@ -1,0 +1,14 @@
+/**************************************************************/
+/* Typeform API EMBED v0. */
+/**************************************************************/
+
+.typeform-formembed{
+  width: 50%; /* This Property Controls the Outer Div that is container for embed */
+  margin: 0 auto; /* This Property Controls the Outer Div center positioning*/
+  padding: 0; /* This Property Controls the Outer Div padding */
+}
+
+.typeform-widget{
+  width: 100%; /* This Property Controls the Inner Div that is container for iframe*/
+  height: 500px; /* This Property Controls the Inner Div height */
+}

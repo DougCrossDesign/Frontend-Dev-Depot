@@ -1,0 +1,31 @@
+> [Repeating Elements]
+
+Location Name
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: 100 Characters
+
+
+Address
+------------------------------------------
+Format			: "1100 Hector Street, Conshohocken, PA 19428"
+Input Type 		: Input[text]
+
+
+Lat/Long
+------------------------------------------
+Format			: Geocode from address
+
+
+Link
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: Unlimited
+
+
+Open in new Window?
+------------------------------------------
+Input Type 		: Checkbox
+Options			: Yes / No
+
+> End Repeating

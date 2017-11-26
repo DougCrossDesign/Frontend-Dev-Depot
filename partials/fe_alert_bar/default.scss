@@ -1,0 +1,11 @@
+/**************************************************************/
+/* Alert Bar */
+/**************************************************************/
+
+.alert-bar {
+	background-color: $c1; color: #fff; padding: 10px 0; font-size: 12px; text-align: center;
+	span {font-weight: bold;}
+	.alert-bar-wrap {
+		@extend .wrap-xlg
+	}
+}

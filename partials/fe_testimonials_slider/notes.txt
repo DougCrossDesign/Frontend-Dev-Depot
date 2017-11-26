@@ -1,0 +1,14 @@
+> [Repeating Elements]
+
+Name 
+------------------------------------------
+Input Type 		: Input[text]
+
+
+Testimonial Content
+------------------------------------------
+Input Type 		: TinyMCE
+Char Count		: Unlimited
+Other			: Recommend less than 400
+
+> End Repeating

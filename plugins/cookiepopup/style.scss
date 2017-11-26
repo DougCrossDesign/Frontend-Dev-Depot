@@ -1,0 +1,53 @@
+/**************************************************************/
+/* Cookie Pop Up */
+/**************************************************************/
+
+.modal {
+	position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1050; display: block; overflow: hidden; outline: 0; background: rgba(0, 0, 0, 0.5);
+	@include opacity(1);
+	-webkit-overflow-scrolling: touch;
+	&.in .modal-dialog {
+		@include transform(translate3d(0, 0, 0));
+	}
+	&.fade .modal-dialog {
+		@include transition(transform(.3s ease-out));
+		@include transform(translate3d(0, -25%, 0));
+	}
+	&.hidden {
+		display: none;
+		@include opacity(0);
+		@include transition(opacity .15s linear);
+	}
+	.modal-dialog { position: relative; max-width: 600px; width: 75%; margin: 30px auto; top: 20%; }
+	.modal-content {
+		position: relative; background-color: #fff; border-radius: 6px; outline: 0; padding: 15px;
+		@include background-clip(padding-box);
+		@include box-shadow(0 5px 15px rgba(0, 0, 0, .25));
+		.modal-header {
+			min-height: 16.43px; border-bottom: 1px solid #e5e5e5;
+			button.close {
+				float: right; font-size: 21px; font-weight: 700; line-height: 1; color: #000; text-shadow: 0 1px 0 #fff;
+				margin-top: -2px; padding: 0; cursor: pointer; background: 0 0; border: 0;
+				-webkit-appearance: none;
+				@include opacity(0.2);
+				&:hover { color: #d43f3a; @include opacity(0.75); }
+			}
+			.modal-title { margin: 0 0 1em 1%; }
+		}
+		.modal-footer { margin: 2% 1% !important; }
+	}
+	p { margin-right: 1%; margin-left: 1%; }
+	input { padding: 1em; background: #ccc; border: 1px #a2a2a2 solid; color: #a2a2a2; float: left; }
+	.btn { color: #fff; padding: 0.75em 1em; border-radius: 12px; }
+	.btn-notify {
+		background: #d9534f; border: 1px solid #d43f3a;
+		&:hover { background: #d43f3a; border: 1px solid #d9534f; }
+	}
+	.btn-primary {
+		background: #337ab7; border: 1px solid #2e6da4;
+		&:hover { background: #2e6da4; border: 1px solid #337ab7; }
+	}
+}
+.modal-open .modal {
+	overflow-x: hidden; overflow-y: auto;
+}

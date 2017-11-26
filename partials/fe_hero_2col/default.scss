@@ -1,0 +1,50 @@
+/**************************************************************/
+/* Hero - 2 Column */
+/**************************************************************/
+
+.hero-2col-outer {
+	background: #1e1e1f url("images/hero-2col-bg.jpg");
+	background-size: cover;
+	margin-bottom: 50px;
+	@media screen and (max-width : $bp-md) {
+		.wrap-pad {padding: 0;}
+	}
+}
+.hero-2col {
+	.hero-image {
+		background-size: contain; width: 63%; float: left; background-position: center center; background-repeat: no-repeat;
+		@media screen and (max-width : $bp-md) {background-size: contain; width: inherit; float: inherit; background-position: center; background-repeat: no-repeat;}
+		&:after {padding-top: 64.3%; display: block; content: "";}
+	}
+	.hero-content {
+		width: 37%; float: left; color: #fff; text-align: right; padding-left: 5%; padding-right: 4%;
+		@media screen and (max-width : $bp-md) {width: inherit; float: inherit; color: #fff; text-align: left; padding: 20px;}
+	}
+	.hero-center {
+		@media screen and (min-width : $bp-md) {
+			position: relative; top: 50%;
+			@include transform(translateY(-50%));
+		}
+	}
+	.hero-hdr {
+		font-size: 36px; line-height: 42px; margin-bottom: 10px;
+		@media screen and (max-width : $bp-sm) {font-size: 32px; line-height: 36px; margin-bottom: 5px;}
+	}
+	.hero-byline {
+		font-size: 22px; margin-bottom: 20px;
+		@media screen and (max-width : $bp-sm) {font-size: 18px; line-height: 20px; margin-bottom: 10px;}
+	}
+	.hero-text {margin-bottom: 20px;}
+	.hero-btn {margin-bottom: 10px;}
+	.slick-list {display: block;}
+	.slick-slide {}
+	.slick-arrow {display: block; position: absolute; top: 0; bottom: 0; width: 30px; height: 30px; line-height: 30px; margin: auto 0; text-align: center; color: #fff; border: none; border-radius: 40px; cursor: pointer; z-index: 1;}
+	.slick-prev {left: 10px;}
+	.slick-next {right: 10px;}
+	.slick-dots {
+		display: block; position: absolute; left: 0; bottom: -41px; width: 100%; padding: 10px 0; text-align: center;
+		li {display: inline-block; margin: 5px;}
+		button {width: 12px; height: 12px; text-indent: -9999px; background-color: #bebdbd; border: none; border-radius: 20px;}
+	}
+	.slick-active button {background-color: #000;}
+}

@@ -1,0 +1,15 @@
+> [Repeating Elements]
+
+Title
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: 100 Characters
+Other			: Easy to adjust length
+
+
+Youtube Link
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: Unlimited
+
+> End Repeating

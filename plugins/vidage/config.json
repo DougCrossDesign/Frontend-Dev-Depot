@@ -1,0 +1,7 @@
+{
+	"title": "Vidage.js v0.3.5",
+	"name": "vidage",
+	"version": "v0.3.5",
+	"description": "Your solution to full-screen background video and image combined.",
+	"autoinit" : true
+}

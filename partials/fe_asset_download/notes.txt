@@ -1,0 +1,37 @@
+Header [Optional]
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: Recommend less than 100
+
+
+> [Repeating Elements]
+> Recommend less than 25 per page
+
+Title
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: 90 characters
+
+
+Preview Image
+------------------------------------------
+Input Type 		: File Input
+Format			: JPG
+Image Size		: 1100x900
+Image Resize	: Aspect Fill
+
+
+Thumbnail Image
+------------------------------------------
+Data	 		: Uses Full Size Image
+Image Size		: 350x350
+Image Resize	: Center Crop
+
+
+File Upload (linked via download button)
+------------------------------------------
+Input Type 		: file upload
+File Types		: JPG, PNG, ZIP
+Upload Limit 	: 10megs (set by BE)
+
+> End Repeating

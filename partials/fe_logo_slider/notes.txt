@@ -1,0 +1,22 @@
+> [Repeating Elements]
+
+Logo Image
+------------------------------------------
+Input Type 		: File Input
+Format			: PNG / JPG (recommend transparent)
+Image Size		: 350x350
+Image Resize	: Aspect Fill (no crop)
+
+
+Link
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: Unlimited
+
+
+Open in new Window?
+------------------------------------------
+Input Type 		: Checkbox
+Options			: Yes / No
+
+> End Repeating

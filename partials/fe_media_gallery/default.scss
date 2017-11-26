@@ -1,0 +1,13 @@
+/**************************************************************/
+/* Media Viewer */
+/**************************************************************/
+
+.media-viewer-main {
+	margin-bottom: 10px;
+	img {cursor: pointer;}
+}
+.media-viewer-thumbs {
+	margin-right: -10px;
+	img {cursor: pointer;}
+	.slick-slide {padding-right: 10px;}
+}

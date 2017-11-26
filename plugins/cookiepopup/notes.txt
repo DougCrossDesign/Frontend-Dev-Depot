@@ -1,0 +1,1 @@
+Clear cache to remove active cookies. You an set expiration date with setTime within writeCookie function.

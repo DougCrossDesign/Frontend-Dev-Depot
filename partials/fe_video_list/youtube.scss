@@ -1,0 +1,24 @@
+/**************************************************************/
+/* Video List */
+/**************************************************************/
+
+.video-list-yt {
+	.video-list-player {
+		width: 65%; height: 500px; float: left;
+		@media screen and (max-width : $bp-md) {width: inherit; float: inherit; height: 350px;}
+	}
+	.video-list-select {
+		width: 35%; height: 500px; overflow-y: auto; background-color: #3b3b3b;
+		@media screen and (max-width : $bp-md) {width: inherit; float: inherit; height: 300px;}
+		ul {
+			li {
+				border-bottom: 1px solid #000;
+				a {
+					padding: 20px 30px; display: block; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; text-align: center; background-color: #5d5d5d; color: #ccc;
+					&.active {background-color: #808080;}
+					&:hover {background-color: #fff; color: #9c9b9b;}
+				}
+			}
+		}
+	}
+}

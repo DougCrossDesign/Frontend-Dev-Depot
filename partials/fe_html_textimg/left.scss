@@ -1,0 +1,12 @@
+/**************************************************************/
+/* HTML Enabled Text Area w/ image on left */
+/**************************************************************/
+
+.html-textimg-left {
+	.img-insert {
+		float: left; max-width: 50%; margin-right: 30px; margin-bottom: 30px;
+		@media screen and (max-width : $bp-sm) {
+			max-width: 100%; margin: 0 auto 30px; float: inherit;
+		}
+	}
+}

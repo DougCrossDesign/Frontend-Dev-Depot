@@ -1,0 +1,146 @@
+/**************************************************************/
+/* Video Slider */
+/**************************************************************/
+
+.combined-slider{
+	max-width: 1140px;
+	min-height: 500px;
+	padding-bottom: 5%;
+
+	.player-wrapper {
+		/* Responsive Container*/
+		position: relative; cursor: pointer; background: no-repeat center center; background-size: cover; height: 0; clear: both;
+		max-height: 500px;
+		/* 16:9 */ padding-bottom: 56.25%;
+		@include transition(0.35s ease all);
+		iframe {
+			/* Responsive Youtube Embed */
+			width: 100%; height: 100%; max-height: 500px; position: absolute; top: 0; left: 0; z-index: 3;
+			@include transition(0.35s ease all);
+		}
+		.thumbnail_container {
+			width: 100%; overflow: hidden; max-height: 500px;
+			@include transition(0.35s ease all);
+			img {
+				/* Responsive Image*/
+				width: 100%;
+				@include transition(0.35s ease all);
+			}
+		}
+		.start-video {
+			display: inline-block !important;
+		    padding: 15px 20px;
+		    text-align: center;
+		    text-transform: uppercase;
+		    font-size: 20px;
+		    color: #fff;
+		    background: #364088;
+		    font-weight: 700;
+		    letter-spacing: 1px;
+
+			display: block;
+			position: relative;
+			top: 25%;
+			left:0;
+			cursor: pointer; /*top: 40%; left: 50%;*/
+			@include transition(0.35s ease all);
+
+			span{
+				&::before {
+					content: ""; width: 0; height: 0; line-height: 0; display: inline-block; border-style: solid; border-width: 8px 0 8px 16px; margin: -25px 0 0 -20px; border-color: transparent transparent transparent #fff; padding: 0; margin: 0px 8px 0px 0px;
+				}
+			}
+
+			&:hover{
+				color: #fff;
+			    background: #282f63;
+			}
+			&::before {
+				display: none;
+			}
+			&::after { display:none; }
+			&:hover::before {
+				/* Play Icon Hover Background */
+				background-color: transparent;
+			}
+		}
+	}
+
+	position: relative; color: #fff;
+	.hero-wide-overlay {position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,.5); width: 100%; height: 100%; max-height: 500px;}
+	.hero-slick-content {max-width: 580px; margin: auto; padding: 0 20px;}
+	.hero-hdr {
+		font-size: 42px; line-height: 48px; margin-bottom: 10px; font-weight: $fw-bold;
+		@media screen and (max-width : $bp-sm) {font-size: 32px; line-height: 36px; margin-bottom: 5px;}
+	}
+	.hero-byline {
+		font-size: 22px; margin-bottom: 20px;
+		@media screen and (max-width : $bp-sm) {font-size: 18px; line-height: 20px; margin-bottom: 10px;}
+	}
+	.hero-text {margin-bottom: 20px;}
+	.hero-btn {margin-bottom: 0px;}
+	.slick-list {display: block;}
+	.slick-slide {
+		background-color: transparent; background-repeat: no-repeat; background-position: center center; background-size: cover; padding: 0; height: 500px; position: relative; background-color: #ccc;
+		@media screen and (max-width : $bp-sm) {height: 400px;}
+	}
+	.slick-arrow {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 5%;
+		width: 40px;
+		height: 40px;
+		line-height: 30px;
+		margin: auto 0;
+		padding: 0.5% 1%;
+		text-align: center;
+		background-color: #ffffff;
+		color: #000;
+		border: none;
+		border-radius: 40px;
+		cursor: pointer;
+		z-index: 1;
+		font-size: 21px;
+		font-weight: 800;
+
+		&:hover{
+			background-color: #ccc;
+		}
+	}
+	.slick-prev {
+		left: 10px;
+	}
+	.slick-next {
+		right: 10px;
+	}
+	.slick-dots {
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 10px 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			margin: 5px;
+		}
+		button {
+			width: 12px;
+			height: 12px;
+			text-indent: -9999px;
+			background-color: #ccc;
+			border: none;
+			border-radius: 20px;
+
+			&:hover{
+				background-color: #000000;
+			}
+		}
+	}
+	.slick-active button {
+		background-color: #000000;
+	}
+}

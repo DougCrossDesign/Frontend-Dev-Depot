@@ -1,0 +1,29 @@
+/**************************************************************/
+/* Info Block */
+/**************************************************************/
+
+.infoblock-default {
+	background-size: cover; max-width: 450px; margin: 0 auto;
+	.infoblock-default-content {color: #fff;}
+	.infoblock-default-wrap {height: 300px; position: relative;}
+	.infoblock-default-overlay {
+		padding: 30px; position: absolute; top: 0; right: 0; bottom: 0; left: 0; color: #fff; background-color: $c1; height: 100%; width: 100%;
+		@include opacity(0);
+		@include transition(all 0.2s ease-in-out);
+		@media screen and (max-width : $bp-sm) {
+			@include opacity(1);
+		}
+		&:hover {
+			@include opacity(1);
+		}
+	}
+	.infoblock-default-hdr {margin-bottom: 10px; text-transform: uppercase; background-color: $c1; padding: 5px 20px; font-size: 20px; max-width: 90%; font-weight: 700; margin-top: 30px; color: #fff; display: inline-block;}
+	.infoblock-default-hdrbg {padding: 8px 20px; background-color: $c1; display: inline-block; color: #fff;}
+	.infoblock-default-byline {margin-bottom: 20px;}
+	.infoblock-default-text {max-width: 300px; padding-left: 30px; font-size: 13px; line-height: 20px;}
+	.infoblock-default-btn {
+		background-color: $c2; padding: 10px 20px; font-weight: bold; text-transform: uppercase; position: absolute; right: 0; bottom: 0; display: inline-block; font-size: 30px; font-weight: bold;
+		&:hover {background-color: $c1;}
+	}
+	.infoblock-default-darken {background-color: rgba(0,0,0,.65); position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%;}
+}

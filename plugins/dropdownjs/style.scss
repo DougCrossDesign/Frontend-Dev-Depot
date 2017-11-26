@@ -1,0 +1,19 @@
+/**************************************************************/
+/* Dropdown */
+/**************************************************************/
+
+.dpdwn { position: relative; margin: 0 0 20px; }
+.dpdwn-btn {
+	display: block; float: none; width: auto; height: 40px; line-height: 38px; padding: 0 30px 0 15px; font-weight: bold; font-size: 14px; color: #000; background: powderblue; border: 1px solid #000; cursor: pointer;
+	&:after { content: ""; border-top: 7px solid #000; border-left: 7px solid transparent; border-right: 7px solid transparent; position: absolute; right: 10px; top: 15px; }
+}
+.active .dpdwn-btn:after { border-top: none; border-bottom: 7px solid #000; }
+.dpdwn-list {
+	display: block; max-height: 170px; overflow: auto; padding: 0; margin: 0; text-align: left; border: 1px solid #000; border-top: none; border-radius: 0 0 5px 5px;
+	a {
+		display: block; width: auto; padding: 7px 15px; font-size: 14px; color: #000; background: powderblue;
+		&:hover { color: #fff; background: #000; }
+		&.current { color: #000; background: lightcyan; }
+	}
+}
+.js .dpdwn-list { display: none; position: absolute; left: 0; top: 40px; width: 100%; z-index: 10; box-shadow: 1px 1px 3px rgba(120,120,120,.2); }

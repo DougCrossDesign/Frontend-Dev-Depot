@@ -1,0 +1,32 @@
+> [Repeating Elements]
+
+Header
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: 100 Characters
+
+
+Description
+------------------------------------------
+Input Type 		: TextArea
+Char Count		: 140 Characters
+
+
+Link Text
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: 40 Characters
+
+
+Link
+------------------------------------------
+Input Type 		: Input[text]
+Char Count		: Unlimited
+
+
+Open in new Window?
+------------------------------------------
+Input Type 		: Checkbox
+Options			: Yes / No
+
+> End Repeating

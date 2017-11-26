@@ -1,0 +1,2 @@
+- Page loading does not work in example due to query string commands of plugin display
+- This plugin is designed to work with Colorbox

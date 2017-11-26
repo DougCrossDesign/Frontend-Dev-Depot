@@ -1,0 +1,23 @@
+/**************************************************************/
+/* Cookie Pop Up */
+/**************************************************************/
+
+.modal { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1050; display: block; overflow: hidden; outline: 0; background: rgba(0, 0, 0, 0.5); filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false); opacity: 1; -webkit-overflow-scrolling: touch; }
+.modal.in .modal-dialog { -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+.modal.fade .modal-dialog { -moz-transition: transform(0.3s ease-out); -o-transition: transform(0.3s ease-out); -webkit-transition: transform(0.3s ease-out); transition: transform(0.3s ease-out); -moz-transform: translate3d(0, -25%, 0); -ms-transform: translate3d(0, -25%, 0); -webkit-transform: translate3d(0, -25%, 0); transform: translate3d(0, -25%, 0); }
+.modal.hidden { display: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); opacity: 0; -moz-transition: opacity 0.15s linear; -o-transition: opacity 0.15s linear; -webkit-transition: opacity 0.15s linear; transition: opacity 0.15s linear; }
+.modal .modal-dialog { position: relative; max-width: 600px; width: 75%; margin: 30px auto; top: 20%; }
+.modal .modal-content { position: relative; background-color: #fff; border-radius: 6px; outline: 0; padding: 15px; -moz-background-clip: padding; -o-background-clip: padding-box; -webkit-background-clip: padding; background-clip: padding-box; -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); }
+.modal .modal-content .modal-header { min-height: 16.43px; border-bottom: 1px solid #e5e5e5; }
+.modal .modal-content .modal-header button.close { float: right; font-size: 21px; font-weight: 700; line-height: 1; color: #000; text-shadow: 0 1px 0 #fff; margin-top: -2px; padding: 0; cursor: pointer; background: 0 0; border: 0; -webkit-appearance: none; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); opacity: 0.2; }
+.modal .modal-content .modal-header button.close:hover { color: #d43f3a; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75); opacity: 0.75; }
+.modal .modal-content .modal-header .modal-title { margin: 0 0 1em 1%; }
+.modal .modal-content .modal-footer { margin: 2% 1% !important; }
+.modal p { margin-right: 1%; margin-left: 1%; }
+.modal input { padding: 1em; background: #ccc; border: 1px #a2a2a2 solid; color: #a2a2a2; float: left; }
+.modal .btn { color: #fff; padding: 0.75em 1em; border-radius: 12px; }
+.modal .btn-notify { background: #d9534f; border: 1px solid #d43f3a; }
+.modal .btn-notify:hover { background: #d43f3a; border: 1px solid #d9534f; }
+.modal .btn-primary { background: #337ab7; border: 1px solid #2e6da4; }
+.modal .btn-primary:hover { background: #2e6da4; border: 1px solid #337ab7; }
+.modal-open .modal { overflow-x: hidden; overflow-y: auto; }

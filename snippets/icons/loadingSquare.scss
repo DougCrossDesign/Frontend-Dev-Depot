@@ -1,0 +1,39 @@
+@import "compass";
+.shift-container{
+  display: block;
+  width: 100%;
+}
+.shift-load{
+  margin: 2% auto;
+  width: 50px;
+  height: 50px;
+  border-top-style: solid;
+  border-top-width: 10px;
+  border-top-color: #4C6085;
+  border-right-style: solid;
+  border-right-width: 10px;
+  border-right-color: #4C6085;
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+  border-bottom-color: #39A0ED;
+  border-left-style: solid;
+  border-left-width: 10px;
+  border-left-color: #39A0ED;
+  @include animation(loading 2.5s linear infinite);
+}
+
+@keyframes loading{
+  0%{
+    @include transform(rotate(0deg));
+    @include border-radius(0%);
+    @include transform(scale(1));
+  }
+  50%{
+    @include transform(rotate(180deg)scale(.85));
+    @include border-radius(50%);
+  }
+  100%{
+    @include transform(rotate(0deg)scale(1));
+    @include border-radius(0%);
+  }
+}

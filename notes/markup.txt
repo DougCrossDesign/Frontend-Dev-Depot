@@ -1,0 +1,29 @@
+
+> SVG w/ Fallback PNG
+<img src="image.svg" onerror="this.src='image.png';this.onerror=null;" alt="" >
+
+
+----------
+
+
+> SVG w/ Fallback PNG (AYCCMS)
+<img src="<?php insertImage('logo.svg') ?>" onerror="this.src='<?php insertImage("logo.png") ?>';this.onerror=null;" alt="" >
+
+
+----------
+
+
+> Source Set Images
+<img src="images/space-needle.jpg"
+srcset="images/space-needle.jpg 1x, images/space-needle-2x.jpg 2x,
+images/space-needle-hd.jpg 3x">
+
+
+----------
+
+
+> Example Loop
+<?php for ($i=0; $i < 4; $i++) { // FRONTEND FOR EXAMPLE LOOP -- REPLACE ?>
+	<?php insertPartial("fe_infoblock", "default", $obj); ?>
+<?php } ?>
+

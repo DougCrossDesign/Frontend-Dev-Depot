@@ -1,0 +1,21 @@
+/**************************************************************/
+/* Instagram Feed */
+/**************************************************************/
+
+.instagram-feed-example {
+	.instagram-feed {
+		width: 100%; height: 150px; overflow: hidden;
+		ul {
+			width: 150%;
+			li {
+				float: left; width: 150px; font-size: 0;
+				a {
+					display: block;
+					img {
+						display: block; width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

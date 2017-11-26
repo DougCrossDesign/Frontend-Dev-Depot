@@ -1,0 +1,5 @@
+>  Tools / Notes
+
+res =  "thumbnail"   or  low_resolution     standard_resolution
+Assets: http://www.socialassets.aycmedia.com/admin
+Get access token: http://instagram.pixelunion.net/

@@ -1,0 +1,25 @@
+
+#icon {
+  display: inline-block;
+  cursor: pointer;
+.line1, .line2, .line3 {
+  width: 55px;
+  height: 5px;
+  background-color: $c1;
+  margin: 10px 0;
+  @include transition(0.4s);
+  @include border-radius(10px);
+}
+}
+
+.change {
+  .line1 {
+    @include transform(rotate(-45deg)translate(-12px, 9px));
+}
+.line2 {
+    @include opacity(0);
+}
+  .line3 {
+    @include transform(rotate(45deg)translate(-12px, -9px));
+}
+}

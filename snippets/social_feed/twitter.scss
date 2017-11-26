@@ -1,0 +1,17 @@
+/**************************************************************/
+/* Twitter Feed */
+/**************************************************************/
+
+.twitter-feed-example {
+	.twitter-feed {
+		font-size: 16px; line-height: 23px;
+		> ul {
+			overflow: hidden;
+			> li {display: inline-block; width: 33%; min-width: 200px; float: left; padding: 10px;}
+		}
+		.twitter-feed-post {
+			&::first-letter {font-size: 20px;}
+		}
+		.twitter-feed-date {padding: 5px; font-size: 12px;}
+	}
+}

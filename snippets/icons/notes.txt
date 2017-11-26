@@ -1,0 +1,18 @@
+
+Positioning Elements on SEARCH Icon
+------------------------------------------
+
+If the icon is not positioned properly edit the position in line 55 and line 59
+
+line 55:  @include transform(translate(40px, -15px) rotate(-45deg));
+**this moves the handle start location
+
+line 59 :  @include transform(translate(15px, -40px) rotate(0deg));
+**this moves the handle end location (on click)
+
+
+
+Positioning and Sizing background-image on ADD Icon
+----------------------------------------------------------
+
+The size of the background should be 20px less than the size of its container

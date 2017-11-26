@@ -1,0 +1,23 @@
+> Insert image with the current theme images directory path
+<?php insertImage('filename.png') ?>
+
+
+----------
+
+
+> Insert a partial (example with data pass)
+<?php
+	### Hero Data Pass ###
+	$obj-> hero = array(
+		"bgimage" => "/themes/site/assets/images/hero.jpg",
+		"title" => "Hero Title"
+	);
+?>
+<?php insertPartial("header_full", "default", $obj-> hero); ?>
+
+
+----------
+
+
+> Insert an include
+<?php insertInclude("footer",$obj); ?>

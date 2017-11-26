@@ -1,0 +1,102 @@
+> Compass mixin examples
+@include transition(all 0.3s ease-in-out);
+@include transform(translateY(-50%));
+@include transform(scale(1) rotate(-45deg));
+@include rotate(180deg);
+@include opacity(0);
+@include box-sizing(content-box);
+@include box-shadow(0 0 0 4px #666);
+@include border-top-radius(10px);
+@include background-image(linear-gradient(#444, #222));
+@include keyframes(myAnim) {
+	0% {
+		@include opacity(0);
+	}
+	80% {
+		@include opacity(0.3);
+	}
+	100% {
+		@include opacity(1);
+	}
+}
+@include animation(myAnim 0.4s ease);
+
+full list of Compass mixins: http://compass-style.org/index/mixins/
+
+
+----------------------------------------
+
+
+> Helpful Sass mixins:
+
+// center element inside parent
+@mixin center($position) {
+	position: absolute;
+	@if $position == 'vertical' {
+		top: 50%;
+		@include transform(translateY(-50%));
+	}
+	@else if $position == 'horizontal' {
+		left: 50%;
+		@include transform(translate(-50%));
+	}
+	@else if $position == 'both' {
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+	}
+}
+// usage examples
+@include center(vertical);
+@include center(horizontal);
+@include center(both);
+
+
+----------
+
+
+// placeholders
+@mixin placeholder {
+	@at-root #{&}::-webkit-input-placeholder{ @content }
+	@at-root #{&}:-moz-placeholder{ @content }
+	@at-root #{&}::-moz-placeholder{ @content }
+	@at-root #{&}:-ms-input-placeholder{ @content }
+}
+// usage example
+@include placeholder {color: red;}
+
+
+----------
+
+
+// breakpoints
+@mixin breakpoint($width, $type: max) {
+	@if $type == min {
+		$width: $width + 1px;
+	}
+	@media only screen and (#{$type}-width: $width) {
+		@content;
+	}
+}
+// usage examples
+@include breakpoint(700px, max) { width: 600px; }
+@include breakpoint(900px, min) { width: 800px; }
+
+
+----------
+
+
+// background gradients
+@mixin repeating-radial-gradient($value) {
+	@each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+		background-image: #{$vendor}repeating-radial-gradient(#{$value});
+	}
+}
+@mixin repeating-linear-gradient($value) {
+	@each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+		background-image: #{$vendor}repeating-linear-gradient(#{$value});
+	}
+}
+// usage examples
+@include repeating-radial-gradient((center center, #333, #333 2px, transparent 2px, transparent 100%));
+@include repeating-linear-gradient((135deg, rgba(0,0,0,.3), rgba(0,0,0,.3) 1px, transparent 1px, transparent 3px));

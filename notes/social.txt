@@ -1,0 +1,15 @@
+> Curl to return Social Feed.  Change instagram.php to facebook.php or twitter.php
+
+<?php
+$aycsocurl = "http://www.socialassets.aycmedia.com/api/instagram.php?user=1&count=3&resolution=low_resolution";
+$aycsoccontent = file_get_contents($aycsocurl);
+$aycsoccontent = mb_convert_encoding($aycsoccontent, 'HTML-ENTITIES', "UTF-8");
+echo($aycsoccontent);
+?>
+
+
+>  Tools / Notes
+
+res =  "thumbnail"   or  low_resolution     standard_resolution
+Assets: http://www.socialassets.aycmedia.com/admin
+Get access token: http://instagram.pixelunion.net/
